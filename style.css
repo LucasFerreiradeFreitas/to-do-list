@@ -1,0 +1,111 @@
+/* Reset básico de padding, margin e fonte padrão */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+/* Fundo da página com radial-gradient suave */
+body {
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+  background-size: 10px 10px;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+/* Container principal do app */
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+/* Título principal */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+/* Área de entrada da tarefa */
+.to-do-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+/* Campo de texto para digitar a tarefa */
+.to-do-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/* Botão de adicionar tarefa */
+.to-do-input button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Efeito ao passar o mouse no botão */
+.to-do-input button:hover {
+  background: #0056b3;
+}
+/* Botões de filtro: Todas, Ativas, Concluídas */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: #eee;
+  border-radius: 5px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+/* Botão ativo do filtro (destacado) */
+.filters .active {
+  background: #007bff;
+  color: white;
+}
+/* Lista de tarefas */
+ul#taskList {
+  list-style: none;
+}
+/* Estilo de cada tarefa */
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+/* Tarefa concluída */
+.task.completed {
+  background-color: #d4edda; /* verde claro */
+}
+/* Texto da tarefa concluída*/
+.task.completed span {
+  text-decoration: line-through;
+  color: #155724;
+}
+/* Botão de deletar tarefa */
+.task button {
+  background: transparent;
+  border: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+}
